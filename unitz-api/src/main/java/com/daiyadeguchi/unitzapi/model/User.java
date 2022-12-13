@@ -1,5 +1,8 @@
 package com.daiyadeguchi.unitzapi.model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class User extends BaseEntity {
 
     private String firstName;
@@ -10,7 +13,21 @@ public class User extends BaseEntity {
     private int emergencyPhoneNo;
     private int totalUnits;
     private int remainingUnits;
-    private long courcesId;
+    private long coursesId;
+
+    public User(String firstName, String lastName, Boolean adminFlg, String major, int phoneNo, int emergencyPhoneNo, int totalUnits, int remainingUnits, long coursesId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.adminFlg = adminFlg;
+        this.major = major;
+        this.phoneNo = phoneNo;
+        this.emergencyPhoneNo = emergencyPhoneNo;
+        this.totalUnits = totalUnits;
+        this.remainingUnits = remainingUnits;
+        this.coursesId = coursesId;
+    }
+
+    public User() {}
 
     public String getFirstName() {
         return firstName;
@@ -76,11 +93,11 @@ public class User extends BaseEntity {
         this.remainingUnits = remainingUnits;
     }
 
-    public long getCourcesId() {
-        return courcesId;
+    public long getCoursesId() {
+        return coursesId;
     }
 
-    public void setCourcesId(long courcesId) {
-        this.courcesId = courcesId;
+    public void setCoursesId(long coursesId) {
+        this.coursesId = coursesId;
     }
 }

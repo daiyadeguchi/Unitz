@@ -1,9 +1,19 @@
 package com.daiyadeguchi.unitzapi.model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class CoursesTaken extends BaseEntity {
 
     private long userId;
     private long coursesId;
+
+    public CoursesTaken(long userId, long coursesId) {
+        this.userId = userId;
+        this.coursesId = coursesId;
+    }
+
+    public CoursesTaken() {}
 
     public long getUserId() {
         return userId;
