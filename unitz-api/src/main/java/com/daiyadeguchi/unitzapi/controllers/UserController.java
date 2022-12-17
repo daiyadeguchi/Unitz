@@ -16,6 +16,7 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/users")
     List<User> all() {
         return userRepository.findAll();
