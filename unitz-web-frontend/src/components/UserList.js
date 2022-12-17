@@ -15,17 +15,30 @@ const UserList = () => {
     }, []);
 
     return (
-        <div className="users-container">
-            {users.map((user) => {
-                return (
-                    <div className="user-id" key={user.id}>
-                        <h2 className="first-name">{user.firstName}</h2>
-                        <h2 className="last-name">{user.lastName}</h2>
-                        <h3 className="major">{user.major}</h3>
-                        <h3 className="phone-no">{user.phoneNo}</h3>
-                    </div>
-                );
-            })}
+        <div className="users-container px-5">
+            <div>
+                <table className="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Major</th>
+                            <th scope="col">Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map((user) => {
+                            return (
+                                <tr key={user.id}>
+                                    <td className="first-name">{user.firstName}</td>
+                                    <td className="last-name">{user.lastName}</td>
+                                    <td className="major">{user.major}</td>
+                                    <td className="phone-no">{user.phoneNo}</td>
+                                </tr>
+                        )})}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
