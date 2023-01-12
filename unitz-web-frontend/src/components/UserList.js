@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const UserList = () => {
+export default function UserList() {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         fetch('http://localhost:8080/users')
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 setUsers(data);
             })
             .catch((err) => {
@@ -35,12 +34,11 @@ const UserList = () => {
                                     <td className="major">{user.major}</td>
                                     <td className="phone-no">{user.phoneNo}</td>
                                 </tr>
-                        )})}
+                            )
+                        })}
                     </tbody>
                 </table>
             </div>
         </div>
     );
 }
-
-export default UserList;
