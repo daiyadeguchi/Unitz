@@ -1,4 +1,4 @@
-const Navbar = () => {
+function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark px-5">
             <a className="navbar-brand text-light" href="/index">Unitz</a>
@@ -9,10 +9,10 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link text-light" href="/">Home<span className="sr-only">(current)</span></a>
+                        <a className="nav-link text-light" href="http://localhost:3000/user">Home<span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-light" href="/">Link</a>
+                        <a className="nav-link text-light" href="/user">Link</a>
                     </li>
                 </ul>
             </div>

@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import UserList from './components/UserList';
 import Navbar from './components/Navbar';
-import 'bootstrap/dist/css/bootstrap.css'
+import UserList from './components/UserList'
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
-    <UserList />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<UserList />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
