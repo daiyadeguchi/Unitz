@@ -2,7 +2,6 @@ package com.daiyadeguchi.unitzapi.controllers;
 
 import com.daiyadeguchi.unitzapi.model.User;
 import com.daiyadeguchi.unitzapi.repository.UserRepository;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
